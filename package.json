@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "tail": "npx tailwindcss -i ./src/app/globals.css -o ./src/styles/tailwind.css"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^7.1.0",

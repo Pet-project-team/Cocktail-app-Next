@@ -16,7 +16,7 @@ export default function SignUp() {
       <p
         id='welcome-msg'
         className='m-auto text-center leading-[150%] self-stretch
-                text-primary-text text-[16px] not-italic font-bold '
+                text-black/85 text-[16px] not-italic font-bold '
       >
         Welcome back! Wanna get high tonight?
       </p>
@@ -24,9 +24,9 @@ export default function SignUp() {
         id='google'
         className='box-border flex justify-center items-center self-center gap-[10px]
                    w-full h-[30px] py-0 px-[10px] rounded-[5px]
-                   border border-highlighted bg-white
+                   border border-main-600 bg-white
                    transition-all duration-300 
-                 hover:border-highlighted-hov hover:text-highlighted
+                 hover:border-main-700 hover:text-main-600
                    font-bold leading-[150%]'
         type='button'
       >
@@ -37,9 +37,9 @@ export default function SignUp() {
         id='facebook'
         className='box-border flex justify-center items-center self-center gap-[10px]
                    w-full h-[30px] py-0 px-[10px] rounded-[5px]
-                   border border-highlighted bg-white
+                   border border-main-600 bg-white
                    transition-all duration-300 
-                 hover:border-highlighted-hov hover:text-highlighted
+                 hover:border-main-700 hover:text-main-600
                    font-bold leading-[150%]'
         type='button'
       >

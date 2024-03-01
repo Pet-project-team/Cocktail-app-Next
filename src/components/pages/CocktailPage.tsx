@@ -74,14 +74,14 @@ export default function CocktailPage({ id }: CocktailPageProps) {
     <>
       <div id='top-links' className='flex justify-between h-[30px] mb-[20px]'>
         <Link
-          className='flex items-center text-primary-text text-[16px] transition-all duration-300 hover:text-highlighted'
+          className='flex items-center text-black/85 text-[16px] transition-all duration-300 hover:text-main-600'
           href={id - 1 === 0 ? '/' : '/cocktails/' + (id - 1)}
         >
           <PreviousIcon />
           {id - 1 === 0 ? 'On main page' : 'Previous cocktail'}
         </Link>
         <Link
-          className='flex items-center text-primary-text text-[16px] transition-all duration-300 hover:text-highlighted'
+          className='flex items-center text-black/85 text-[16px] transition-all duration-300 hover:text-main-600'
           href={'/cocktails/' + (id + 1)}
         >
           Next cocktail
@@ -98,17 +98,17 @@ export default function CocktailPage({ id }: CocktailPageProps) {
           id='cocktail-main-info'
           className='flex flex-col items-center gap-[10px] min-w-[300px] w-[25%] max-w-[433px]'
         >
-          <h1 className='text-primary-text text-center text-[28px] font-normal leading-[150%] m-auto'>
+          <h1 className='text-black/85 text-center text-[28px] font-normal leading-[150%] m-auto'>
             {cocktailPageInfo?.cocktailName}
           </h1>
-          <p className='text-primary-text text-[16px] leading-[150%] m-auto'>
+          <p className='text-black/85 text-[16px] leading-[150%] m-auto'>
             {cocktailPageInfo?.cocktailDescription}
           </p>
           <div
             id='share-links'
             className='flex items-center gap-[10px] self-stretch'
           >
-            <p className='text-primary-text text-[16px] leading-[150%] m-0'>
+            <p className='text-black/85 text-[16px] leading-[150%] m-0'>
               Share
             </p>
             <TwitterShareButton
@@ -155,7 +155,7 @@ export default function CocktailPage({ id }: CocktailPageProps) {
             >
               <CopyIcon />
               {isCopied && (
-                <span className='text-primary-text cursor-default absolute top-[30px] left-[50%] translate-x-[-50%]'>
+                <span className='text-black/85 cursor-default absolute top-[30px] left-[50%] translate-x-[-50%]'>
                   Copied!
                 </span>
               )}
@@ -188,7 +188,7 @@ export default function CocktailPage({ id }: CocktailPageProps) {
               <div id='measurement' className='flex gap-[30px]'>
                 <p
                   id='measurement-title'
-                  className='text-primary-text text-[16px] leading-[150%] h-[36px] pb-[12px] m-0'
+                  className='text-black/85 text-[16px] leading-[150%] h-[36px] pb-[12px] m-0'
                 >
                   Measurement:
                 </p>
@@ -210,7 +210,7 @@ export default function CocktailPage({ id }: CocktailPageProps) {
           {tab === 1 && (
             <div id='ingredients-tab'>
               <div id='cocktail-secondary-info__content'>
-                <h2 className=' text-primary-text text-start text-[24px] font-normal leading-[150%] mb-[10px]'>
+                <h2 className=' text-black/85 text-start text-[24px] font-normal leading-[150%] mb-[10px]'>
                   Ingredients
                 </h2>
                 <CocktailPageTable
@@ -218,7 +218,7 @@ export default function CocktailPage({ id }: CocktailPageProps) {
                   list={ingredientsList}
                   measurement={measurement}
                 />
-                <h2 className=' text-primary-text text-start text-[24px] font-normal leading-[150%] mb-[10px]'>
+                <h2 className=' text-black/85 text-start text-[24px] font-normal leading-[150%] mb-[10px]'>
                   Equipment
                 </h2>
                 <CocktailPageTable
@@ -232,7 +232,7 @@ export default function CocktailPage({ id }: CocktailPageProps) {
           {tab === 2 && (
             <div id='recipe-tab'>
               <h2
-                className='text-primary-text text-start text-[24px] font-normal leading-[150%] mb-[10px]'
+                className='text-black/85 text-start text-[24px] font-normal leading-[150%] mb-[10px]'
                 id='recipe-title'
               >
                 Step by step
@@ -242,10 +242,10 @@ export default function CocktailPage({ id }: CocktailPageProps) {
                   {element.type === 'p' && (
                     <p
                       id='recipe-step'
-                      className='text-primary-text text-[18px] leading-[150%] m-auto mb-[10px]'
+                      className='text-black/85 text-[18px] leading-[150%] m-auto mb-[10px]'
                     >
                       {element.step && (
-                        <span className='text-highlighted text-[22px]'>
+                        <span className='text-main-600 text-[22px]'>
                           {element.step}
                         </span>
                       )}

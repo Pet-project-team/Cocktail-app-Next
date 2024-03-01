@@ -20,10 +20,10 @@ export default function HeaderLink({
         href={linkPath}
         className={
           'flex items-center ' +
-          'text-primary-text no-underline font-normal hover:text-highlighted ' +
+          'text-black/85 no-underline font-normal hover:text-main-600 ' +
           'h-[64px] leading-[22px] border-y-2 border-transparent ' +
           'transition-all duration-300 '
-          // (isActive ? 'border-b-highlighted text-highlighted' : '')
+          // (isActive ? 'border-b-main-600 text-main-600' : '')
         }
         onClick={hasHandle ? handleClick : undefined}
       >

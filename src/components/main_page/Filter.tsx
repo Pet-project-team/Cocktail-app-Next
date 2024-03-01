@@ -20,8 +20,6 @@ export default function Filter() {
           border border-slate-300 bg-white'
           type='text'
           placeholder='Find your best cocktail'
-          name=''
-          id=''
         />
         <button
           id='search-button'
@@ -63,7 +61,7 @@ export default function Filter() {
           className='box-border flex justify-center items-center self-stretch gap-[10px]
           h-[30px] py-0 px-[10px] rounded-[5px]
           leading-[22px] text-[16px] 
-          text-white bg-highlighted hover:bg-highlighted-hov
+          text-white bg-main-600 hover:bg-main-700 
           transition duration-300'
         >
           <AddIcon />

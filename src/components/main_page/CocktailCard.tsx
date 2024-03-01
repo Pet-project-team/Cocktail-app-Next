@@ -36,10 +36,10 @@ export default function CocktailCard({ cardInfo, id }: CocktailCardProps) {
           ></img>
         </div>
         <div className='card__info flex flex-col justify-end items-center self-stretch gap-[10px]'>
-          <p className='main-component-name text-primary-text text-center text-[16px] font-normal leading-[22px]'>
+          <p className='main-component-name text-black/85 text-center text-[16px] font-normal leading-[22px]'>
             {cardInfo.mainCompName}
           </p>
-          <p className='cocktail-name text-primary-text text-center text-[20px] font-normal leading-[22px]'>
+          <p className='cocktail-name text-black/85 text-center text-[20px] font-normal leading-[22px]'>
             {cardInfo.cocktailName}
           </p>
         </div>

@@ -108,7 +108,7 @@ export default function CocktailPageTable({
                   group-odd:after:bg-white'
                   scope='col'
                 >
-                  <p className='text-primary-text text-[16px] leading-[150%] m-auto'>
+                  <p className='text-black/85 text-[16px] leading-[150%] m-auto'>
                     {list[id]['name']}
                   </p>
                 </th>
@@ -120,7 +120,7 @@ export default function CocktailPageTable({
                     scope='col'
                   >
                     {item.numberOZ && (
-                      <p className='text-primary-text text-[16px] leading-[150%] m-auto'>
+                      <p className='text-black/85 text-[16px] leading-[150%] m-auto'>
                         {measurement === 1
                           ? item.numberOZ + ' oz '
                           : item.numberOZ * 30 + ' ml '}
@@ -128,7 +128,7 @@ export default function CocktailPageTable({
                     )}
                     {item.number && <p>{item.number}</p>}
                     {!(item.numberOZ || item.number) && (
-                      <p className='text-primary-text text-[16px] leading-[150%] m-auto'>
+                      <p className='text-black/85 text-[16px] leading-[150%] m-auto'>
                         -
                       </p>
                     )}

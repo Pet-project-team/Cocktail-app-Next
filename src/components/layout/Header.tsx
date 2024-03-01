@@ -43,10 +43,7 @@ export default function Header() {
         ></button>
       )}
       <div id='logo' className='w-[200px]'>
-        <Link
-          className='flex items-center text-primary-text no-underline'
-          href='/'
-        >
+        <Link className='flex items-center text-black/85 no-underline' href='/'>
           <Logo />
         </Link>
       </div>

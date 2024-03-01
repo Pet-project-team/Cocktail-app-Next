@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 //icons
 import searchIcon from './searchIcon.svg';
 import clearIcon from './clearFilter.svg';
@@ -6,14 +7,16 @@ import filterIcon from './filterIcon.svg';
 import addIcon from './addNew.svg';
 
 export function SearchIcon() {
-  return <img id='search-icon' className='w-[30px]' src={searchIcon} alt='' />;
+  return (
+    <Image id='search-icon' className='w-[30px]' src={searchIcon} alt='' />
+  );
 }
 export function ClearIcon() {
-  return <img src={clearIcon} alt='' />;
+  return <Image src={clearIcon} alt='' />;
 }
 export function FilterIcon() {
-  return <img src={filterIcon} alt='' />;
+  return <Image src={filterIcon} alt='' />;
 }
 export function AddIcon() {
-  return <img src={addIcon} alt='' />;
+  return <Image src={addIcon} alt='' />;
 }

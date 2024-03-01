@@ -7,9 +7,42 @@ import {
 } from '../../assets/cocktail_page/icons/CocktailPageIcons';
 
 type CocktailPageTableProps = {
-  items: [];
-  list: object;
-  measurement: number;
+  items: (
+    | {
+        ingredienId: number;
+        numberOZ: number;
+        haveLink: boolean;
+        number?: string;
+        equipmentId?: undefined;
+      }
+    | {
+        ingredienId: number;
+        number: string;
+        haveLink: boolean;
+        numberOZ?: number;
+        equipmentId?: undefined;
+      }
+    | {
+        equipmentId: number;
+        haveLink: boolean;
+        ingredienId?: undefined;
+        numberOZ?: number;
+        number?: string;
+      }
+  )[];
+  list: (
+    | {
+        name: string;
+        photo: string;
+        url?: string;
+      }
+    | {
+        name: string;
+        photo: string;
+        url: string;
+      }
+  )[];
+  measurement?: number;
 };
 
 export default function CocktailPageTable({
@@ -18,6 +51,7 @@ export default function CocktailPageTable({
   measurement,
 }: CocktailPageTableProps) {
   let id = 0;
+
   return (
     <table className='border-collapse m-w-[100%] mb-[40px]'>
       <thead>
@@ -51,9 +85,9 @@ export default function CocktailPageTable({
       <tbody>
         {items.map(
           (item) => (
-            list[item.ingredienId]
-              ? (id = item.ingredienId)
-              : (id = item.equipmentId),
+            list[item.ingredienId!]
+              ? (id = item.ingredienId!)
+              : (id = item.equipmentId!),
             (
               <tr className='odd:bg-slate-100 group'>
                 <th
@@ -64,8 +98,8 @@ export default function CocktailPageTable({
                     className='block w-[100px] aspect-square object-contain bg-white rounded-[20px]'
                     width={100}
                     height={100}
-                    src={list[id].photo}
-                    alt={list[id].name}
+                    src={list[id]['photo']}
+                    alt={list[id]['name']}
                   />
                 </th>
                 <th
@@ -75,7 +109,7 @@ export default function CocktailPageTable({
                   scope='col'
                 >
                   <p className='text-primary-text text-[16px] leading-[150%] m-auto'>
-                    {list[id].name}
+                    {list[id]['name']}
                   </p>
                 </th>
                 {measurement && (
@@ -128,7 +162,7 @@ export default function CocktailPageTable({
                         text-[16px] font-normal text-nowrap
                         border border-slate-200 bg-white hover:bg-slate-50
                         transition-all duration-300'
-                        href={list[id].url}
+                        href={list[id]['url']}
                         target='_blank'
                         rel='noreferrer'
                       >

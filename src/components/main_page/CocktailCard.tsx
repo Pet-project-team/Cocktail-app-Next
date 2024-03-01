@@ -1,7 +1,24 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function CocktailCard({ cardInfo, id }) {
+type CocktailCardProps = {
+  cardInfo:
+    | {
+        isLiked: boolean;
+        cocktailPhoto: string;
+        mainCompName: string;
+        cocktailName: string;
+      }
+    | {
+        isLiked: boolean;
+        cocktailPhoto: string;
+        mainCompName: string;
+        cocktailName: string;
+      };
+  id: number;
+};
+
+export default function CocktailCard({ cardInfo, id }: CocktailCardProps) {
   return (
     <div className='w-calc-20 relative'>
       <Link

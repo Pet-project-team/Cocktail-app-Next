@@ -8,7 +8,6 @@ import {
   CopyIcon,
 } from '../../assets/cocktail_page/icons/CocktailPageIcons';
 import Link from 'next/link';
-import Image from 'next/image';
 import cocktailsList from '../../cocktails.json';
 import ingredientsList from '../../ingredients.json';
 import equipmentsList from '../../equipments.json';
@@ -19,8 +18,52 @@ type CocktailPageProps = {
   id: number;
 };
 
+type interfaceCocktailPageInfo = {
+  cocktailName: string;
+  photos: string[];
+  cocktailDescription: string;
+  ingredients: (
+    | {
+        ingredienId: number;
+        numberOZ: number;
+        haveLink: boolean;
+        number?: undefined;
+      }
+    | {
+        ingredienId: number;
+        number: string;
+        haveLink: boolean;
+        numberOZ?: undefined;
+      }
+  )[];
+  equipments: {
+    equipmentId: number;
+    haveLink: boolean;
+  }[];
+  recipe: (
+    | {
+        step: number;
+        type: string;
+        content: string;
+        url?: undefined;
+      }
+    | {
+        type: string;
+        url: string;
+        step?: undefined;
+        content?: undefined;
+      }
+  )[];
+  youtubeURL: string;
+};
+
+// type interfaceIngredientsList={
+
+// }
+
 export default function CocktailPage({ id }: CocktailPageProps) {
-  const cocktailPageInfo = cocktailsList[id - 1].pageInfo;
+  const cocktailPageInfo: interfaceCocktailPageInfo =
+    cocktailsList[id - 1].pageInfo!;
 
   const [tab, setTab] = useState(1);
   const [measurement, setMeasurement] = useState(1);
@@ -171,7 +214,7 @@ export default function CocktailPage({ id }: CocktailPageProps) {
                   Ingredients
                 </h2>
                 <CocktailPageTable
-                  items={cocktailPageInfo?.ingredients}
+                  items={cocktailPageInfo.ingredients}
                   list={ingredientsList}
                   measurement={measurement}
                 />
@@ -181,7 +224,7 @@ export default function CocktailPage({ id }: CocktailPageProps) {
                 <CocktailPageTable
                   items={cocktailPageInfo?.equipments}
                   list={equipmentsList}
-                  measurement={null}
+                  measurement={undefined}
                 />
               </div>
             </div>

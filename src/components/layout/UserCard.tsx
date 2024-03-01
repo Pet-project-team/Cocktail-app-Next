@@ -50,9 +50,9 @@ export default function UserCard({
       >
         <button
           id='sign-up'
-          className='box-border h-[30px] py-0 pl-[10px] pr-[5px] leading-[22px] rounded-[5px]
+          className='box-border h-[30px] py-0 pl-[10px] pr-[5px] rounded-[5px]
                     flex justify-center items-center gap-[10px]
-                    text-[16px] text-white bg-main-600
+                    text-p/[22px] text-white bg-main-600
                     transition-all duration-300 hover:bg-main-700'
           type='button'
           onClick={signUpDisplay ? onCloseFormClick : onSignUpClick}

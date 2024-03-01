@@ -15,8 +15,8 @@ export default function SignUp() {
     >
       <p
         id='welcome-msg'
-        className='m-auto text-center leading-[150%] self-stretch
-                text-black/85 text-[16px] not-italic font-bold '
+        className='m-auto text-center self-stretch
+                text-black/85 text-p/[150%] not-italic font-bold '
       >
         Welcome back! Wanna get high tonight?
       </p>

@@ -1043,28 +1043,37 @@ video {
   font-size: 14px;
 }
 
-.text-\[16px\] {
-  font-size: 16px;
+.text-\[24px\]\/\[150\%\] {
+  font-size: 24px;
+  line-height: 150%;
 }
 
-.text-\[18px\] {
-  font-size: 18px;
+.text-\[28px\]\/\[150\%\] {
+  font-size: 28px;
+  line-height: 150%;
 }
 
-.text-\[20px\] {
+.text-h1 {
   font-size: 20px;
 }
 
-.text-\[22px\] {
-  font-size: 22px;
+.text-h1\/\[22px\] {
+  font-size: 20px;
+  line-height: 22px;
 }
 
-.text-\[24px\] {
-  font-size: 24px;
+.text-p {
+  font-size: 16px;
 }
 
-.text-\[28px\] {
-  font-size: 28px;
+.text-p\/\[150\%\] {
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.text-p\/\[22px\] {
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .font-bold {

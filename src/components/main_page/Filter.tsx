@@ -39,7 +39,7 @@ export default function Filter() {
           {isFiltred && (
             <button
               id='clear-filter'
-              className='box-border flex items-center self-stretch leading-[22px] text-[16px]'
+              className='box-border flex items-center self-stretch text-p/[22px]'
             >
               Clear filter
               <ClearIcon />
@@ -49,7 +49,7 @@ export default function Filter() {
             id='filter-button'
             className='box-border flex justify-center items-center self-stretch gap-[10px]
             h-[30px] py-0 pr-[10px] pl-[5px] rounded-[5px]
-            leading-[22px] text-[16px] border border-slate-300 bg-white 
+            text-p/[22px] border border-slate-300 bg-white 
             hover:bg-slate-50 transition duration-300'
           >
             <FilterIcon />
@@ -59,8 +59,7 @@ export default function Filter() {
         <button
           id='add-new'
           className='box-border flex justify-center items-center self-stretch gap-[10px]
-          h-[30px] py-0 px-[10px] rounded-[5px]
-          leading-[22px] text-[16px] 
+          h-[30px] py-0 px-[10px] rounded-[5px] text-p/[22px]
           text-white bg-main-600 hover:bg-main-700 
           transition duration-300'
         >

@@ -53,7 +53,7 @@ export default function CocktailPageTable({
   let id = 0;
 
   return (
-    <table className='border-collapse m-w-[100%] mb-[40px]'>
+    <table className='border-collapse mb-[40px]'>
       <thead>
         <tr className='group'>
           <th
@@ -108,7 +108,7 @@ export default function CocktailPageTable({
                   group-odd:after:bg-white'
                   scope='col'
                 >
-                  <p className='text-black/85 text-[16px] leading-[150%] m-auto'>
+                  <p className='text-black/85 text-p/[150%] m-auto'>
                     {list[id]['name']}
                   </p>
                 </th>
@@ -120,7 +120,7 @@ export default function CocktailPageTable({
                     scope='col'
                   >
                     {item.numberOZ && (
-                      <p className='text-black/85 text-[16px] leading-[150%] m-auto'>
+                      <p className='text-black/85 text-p/[150%] m-auto'>
                         {measurement === 1
                           ? item.numberOZ + ' oz '
                           : item.numberOZ * 30 + ' ml '}
@@ -128,9 +128,7 @@ export default function CocktailPageTable({
                     )}
                     {item.number && <p>{item.number}</p>}
                     {!(item.numberOZ || item.number) && (
-                      <p className='text-black/85 text-[16px] leading-[150%] m-auto'>
-                        -
-                      </p>
+                      <p className='text-black/85 text-p/[150%] m-auto'>-</p>
                     )}
                   </th>
                 )}
@@ -147,7 +145,7 @@ export default function CocktailPageTable({
                     <button
                       className='flex justify-around items-center gap-[10px]
                       h-[30px] w-full py-0 pr-[10px] pl-[8px] rounded-[5px]
-                      text-[16px] font-normal text-nowrap
+                      text-p font-normal text-nowrap
                       border border-slate-200 bg-white hover:bg-slate-50
                       transition-all duration-300'
                       type='button'
@@ -159,7 +157,7 @@ export default function CocktailPageTable({
                       <a
                         className='flex justify-around items-center gap-[10px]
                         h-[30px] w-full py-0 pr-[10px] pl-[8px] rounded-[5px]
-                        text-[16px] font-normal text-nowrap
+                        text-p font-normal text-nowrap
                         border border-slate-200 bg-white hover:bg-slate-50
                         transition-all duration-300'
                         href={list[id]['url']}

@@ -17,7 +17,7 @@ export default function CocktailPageTab({
   return (
     <button
       className={
-        'nav-info-button box-border h-[36px] flex cursor-pointer transition-all duration-300 text-[16px] leading-[150%] m-auto hover:text-main-600' +
+        'nav-info-button box-border h-[36px] flex cursor-pointer transition-all duration-300 text-p/[150%] m-auto hover:text-main-600' +
         ' ' +
         (comparedTab === tabValue
           ? 'border-b-2 border-b-main-600 text-main-600'

@@ -6,7 +6,7 @@ import {
   CartIcon,
 } from '../../assets/cocktail_page/icons/CocktailPageIcons';
 
-type CocktailPageTableProps = {
+interface CocktailPageTableProps {
   items: (
     | {
         ingredienId: number;
@@ -43,7 +43,7 @@ type CocktailPageTableProps = {
       }
   )[];
   measurement?: number;
-};
+}
 
 export default function CocktailPageTable({
   items,

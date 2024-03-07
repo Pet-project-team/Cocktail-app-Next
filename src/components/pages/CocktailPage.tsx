@@ -14,11 +14,11 @@ import equipmentsList from '../../equipments.json';
 import CocktailPageTab from '../cocktail_page/CocktailPageTab';
 import CocktailPageTable from '../cocktail_page/CocktailPageTable';
 
-type CocktailPageProps = {
+interface CocktailPageProps {
   id: number;
-};
+}
 
-type interfaceCocktailPageInfo = {
+interface interfaceCocktailPageInfo {
   cocktailName: string;
   photos: string[];
   cocktailDescription: string;
@@ -55,11 +55,7 @@ type interfaceCocktailPageInfo = {
       }
   )[];
   youtubeURL: string;
-};
-
-// type interfaceIngredientsList={
-
-// }
+}
 
 export default function CocktailPage({ id }: CocktailPageProps) {
   const cocktailPageInfo: interfaceCocktailPageInfo =

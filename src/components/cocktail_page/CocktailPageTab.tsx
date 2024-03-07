@@ -1,12 +1,12 @@
 'use client';
 import React from 'react';
 
-type CocktailPageTabProps = {
+interface CocktailPageTabProps {
   tabName: string;
   comparedTab: number;
   tabValue: number;
   setComparedTab: React.Dispatch<React.SetStateAction<number>>;
-};
+}
 
 export default function CocktailPageTab({
   tabName,

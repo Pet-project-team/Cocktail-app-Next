@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-type CocktailCardProps = {
+interface CocktailCardProps {
   cardInfo:
     | {
         isLiked: boolean;
@@ -16,7 +16,7 @@ type CocktailCardProps = {
         cocktailName: string;
       };
   id: number;
-};
+}
 
 export default function CocktailCard({ cardInfo, id }: CocktailCardProps) {
   return (

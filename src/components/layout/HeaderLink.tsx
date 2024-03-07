@@ -1,12 +1,12 @@
 import React, { MouseEventHandler } from 'react';
 import Link from 'next/link';
 
-type HeaderLinkProps = {
+interface HeaderLinkProps {
   linkName: string;
   linkPath: string;
   hasHandle?: boolean;
   handleClick?: MouseEventHandler<HTMLAnchorElement>;
-};
+}
 
 export default function HeaderLink({
   linkName,

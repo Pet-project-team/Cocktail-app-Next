@@ -2,12 +2,12 @@ import React, { MouseEventHandler } from 'react';
 import SignUp from './SignUp';
 import { CloseIcon, SignUpIcon } from '../../assets/header/icons/HeaderIcons';
 
-type UserCardProps = {
+interface UserCardProps {
   signUpDisplay: boolean;
   isLoggedIn: boolean;
   onSignUpClick: MouseEventHandler<HTMLButtonElement>;
   onCloseFormClick: MouseEventHandler<HTMLButtonElement>;
-};
+}
 
 export default function UserCard({
   signUpDisplay,

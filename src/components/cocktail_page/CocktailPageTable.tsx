@@ -4,7 +4,7 @@ import Image from 'next/image';
 import {
   AddIcon,
   CartIcon,
-} from '../../assets/cocktail_page/icons/CocktailPageIcons';
+} from '@/assets/cocktail_page/icons/CocktailPageIcons';
 
 interface CocktailPageTableProps {
   items: (
@@ -121,7 +121,7 @@ export default function CocktailPageTable({
                   >
                     {item.numberOZ && (
                       <p className='text-black/85 text-p/[150%] m-auto'>
-                        {measurement === 1
+                        {measurement === 2
                           ? item.numberOZ + ' oz '
                           : item.numberOZ * 30 + ' ml '}
                       </p>

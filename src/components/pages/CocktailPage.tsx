@@ -8,6 +8,9 @@ import {
   CopyIcon,
 } from '../../assets/cocktail_page/icons/CocktailPageIcons';
 import Link from 'next/link';
+
+import { usePathname } from 'next/navigation';
+
 import cocktailsList from '../../cocktails.json';
 import ingredientsList from '../../ingredients.json';
 import equipmentsList from '../../equipments.json';
@@ -64,7 +67,7 @@ export default function CocktailPage({ id }: CocktailPageProps) {
   const [tab, setTab] = useState(1);
   const [measurement, setMeasurement] = useState(1);
   const [isCopied, setIsCopied] = useState(false);
-  const currentURL = window.location.href;
+  const currentURL = usePathname();
 
   return (
     <>

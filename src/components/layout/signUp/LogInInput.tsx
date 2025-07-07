@@ -1,14 +1,20 @@
 import { ClearIcon } from '@/assets/header/icons/HeaderIcons';
-import { useState } from 'react';
 
 interface InputProps {
   inputType: string;
   name: string;
   content: string;
+  enteredValue: string;
+  setEnteredValue: any;
 }
 
-export default function LogInInput({ inputType, name, content }: InputProps) {
-  const [enteredValue, setEnteredValue] = useState('');
+export default function LogInInput({
+  inputType,
+  name,
+  content,
+  enteredValue,
+  setEnteredValue,
+}: InputProps) {
   return (
     <div className='input-container relative w-full'>
       <input
